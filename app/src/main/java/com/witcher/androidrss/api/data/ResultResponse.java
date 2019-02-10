@@ -30,9 +30,25 @@ public class ResultResponse<T> {
             this.message = message;
             this.status = status;
         }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public Status getStatus() {
+            return status;
+        }
     }
 
     public enum Status {
         OK, ERROR
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public Meta getMeta() {
+        return meta;
     }
 }
